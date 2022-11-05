@@ -1,0 +1,27 @@
+{
+  "extends": "adonis-preset-ts/tsconfig.json",
+  "files": [
+    "node_modules/adonis-preset-ts/tsconfig.json",
+    "./resources/.nuxt/tsconfig.json"
+  ],
+  "allowJs": true,
+  "include": ["**/*"],
+  "exclude": ["node_modules", "build"],
+  "compilerOptions": {
+    "outDir": "build",
+    "rootDir": "./",
+    "sourceMap": true,
+    "paths": {
+      "App/*": ["./app/*"],
+      "Config/*": ["./config/*"],
+      "Contracts/*": ["./contracts/*"],
+      "Database/*": ["./database/*"]
+    },
+    "types": [
+      "@adonisjs/core",
+      "@adonisjs/repl",
+      "@japa/preset-adonis/build/adonis-typings",
+      "@adonisjs/lucid"
+    ]
+  }
+}
